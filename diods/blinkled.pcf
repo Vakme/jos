@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Oct 10 16:58:56 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+CONFIG ENABLE_SUSPEND = NO;
+CONFIG POST_CRC = DISABLE;
+COMP "clk" LOCATE = SITE "E12" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "R20" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "T19" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "U20" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "U19" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "V19" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "V20" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "Y22" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "W21" LEVEL 1;
+COMP "start" LOCATE = SITE "T16" LEVEL 1;
+COMP "rst" LOCATE = SITE "T14" LEVEL 1;
+NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+SCHEMATIC END;
+

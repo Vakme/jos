@@ -1,0 +1,524 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: segment_7.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "segment_7.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "segment_7"
+Output Format                      : NGC
+Target Device                      : xc3s700an-4-fgg484
+
+---- Source Options
+Top Module Name                    : segment_7
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "cnt1dek.v" in library work
+Compiling verilog file "transcoder.v" in library work
+Module <cnt1dek> compiled
+Compiling verilog file "MUX.v" in library work
+Module <transcoder> compiled
+Compiling verilog file "mod4clk.v" in library work
+Module <MUX> compiled
+Compiling verilog file "decoder.v" in library work
+Module <mod4clk> compiled
+Compiling verilog file "cntBCD.v" in library work
+Module <decoder> compiled
+Compiling verilog file "../clock_divider/clockdiv.v" in library work
+Module <cntBCD> compiled
+Compiling verilog file "segment_7.v" in library work
+Module <clockdiv> compiled
+Module <segment_7> compiled
+No errors in compilation
+Analysis of file <"segment_7.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <segment_7> in library <work>.
+
+Analyzing hierarchy for module <clockdiv> in library <work> with parameters.
+	div = "00000001011111010111100001000000"
+	nbits = "00000000000000000000000000011001"
+
+Analyzing hierarchy for module <mod4clk> in library <work>.
+
+Analyzing hierarchy for module <decoder> in library <work>.
+
+Analyzing hierarchy for module <cntBCD> in library <work> with parameters.
+	s = "00000000000000000000000000000100"
+
+Analyzing hierarchy for module <MUX> in library <work>.
+
+Analyzing hierarchy for module <transcoder> in library <work>.
+
+Analyzing hierarchy for module <cnt1dek> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <segment_7>.
+Module <segment_7> is correct for synthesis.
+ 
+Analyzing module <clockdiv> in library <work>.
+	div = 32'sb00000001011111010111100001000000
+	nbits = 32'sb00000000000000000000000000011001
+Module <clockdiv> is correct for synthesis.
+ 
+Analyzing module <mod4clk> in library <work>.
+Module <mod4clk> is correct for synthesis.
+ 
+Analyzing module <decoder> in library <work>.
+Module <decoder> is correct for synthesis.
+ 
+Analyzing module <cntBCD> in library <work>.
+	s = 32'sb00000000000000000000000000000100
+Module <cntBCD> is correct for synthesis.
+ 
+Analyzing module <cnt1dek> in library <work>.
+Module <cnt1dek> is correct for synthesis.
+ 
+Analyzing module <MUX> in library <work>.
+Module <MUX> is correct for synthesis.
+ 
+Analyzing module <transcoder> in library <work>.
+Module <transcoder> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clockdiv>.
+    Related source file is "../clock_divider/clockdiv.v".
+    Found 1-bit register for signal <slow_clk>.
+    Found 25-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clockdiv> synthesized.
+
+
+Synthesizing Unit <mod4clk>.
+    Related source file is "mod4clk.v".
+    Found 2-bit up counter for signal <out>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <mod4clk> synthesized.
+
+
+Synthesizing Unit <decoder>.
+    Related source file is "decoder.v".
+    Found 1-of-4 decoder for signal <output_4>.
+    Summary:
+	inferred   1 Decoder(s).
+Unit <decoder> synthesized.
+
+
+Synthesizing Unit <MUX>.
+    Related source file is "MUX.v".
+    Found 4-bit 4-to-1 multiplexer for signal <out_4>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <MUX> synthesized.
+
+
+Synthesizing Unit <transcoder>.
+    Related source file is "transcoder.v".
+    Found 16x7-bit ROM for signal <output_7>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <transcoder> synthesized.
+
+
+Synthesizing Unit <cnt1dek>.
+    Related source file is "cnt1dek.v".
+    Found 1-bit register for signal <ovl>.
+    Found 4-bit up counter for signal <out>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <cnt1dek> synthesized.
+
+
+Synthesizing Unit <cntBCD>.
+    Related source file is "cntBCD.v".
+WARNING:Xst:646 - Signal <enn<4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <cntBCD> synthesized.
+
+
+Synthesizing Unit <segment_7>.
+    Related source file is "segment_7.v".
+Unit <segment_7> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 6
+ 2-bit up counter                                      : 1
+ 25-bit up counter                                     : 1
+ 4-bit up counter                                      : 4
+# Registers                                            : 5
+ 1-bit register                                        : 5
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 6
+ 2-bit up counter                                      : 1
+ 25-bit up counter                                     : 1
+ 4-bit up counter                                      : 4
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <cnt_bcd/dek[3].bcd1/ovl> of sequential type is unconnected in block <segment_7>.
+
+Optimizing unit <segment_7> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block segment_7, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : segment_7.ngr
+Top Level Output File Name         : segment_7
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 162
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 25
+#      LUT2                        : 31
+#      LUT3                        : 13
+#      LUT4                        : 25
+#      MUXCY                       : 31
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 25
+# FlipFlops/Latches                : 47
+#      FDC                         : 29
+#      FDCE                        : 18
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 2
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700anfgg484-4 
+
+ Number of Slices:                       53  out of   5888     0%  
+ Number of Slice Flip Flops:             47  out of  11776     0%  
+ Number of 4 input LUTs:                100  out of  11776     0%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    372     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 47    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 47    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.130ns (Maximum Frequency: 163.132MHz)
+   Minimum input arrival time before clock: 3.247ns
+   Maximum output required time after clock: 9.097ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.130ns (frequency: 163.132MHz)
+  Total number of paths / destination ports: 1064 / 61
+-------------------------------------------------------------------------
+Delay:               6.130ns (Levels of Logic = 26)
+  Source:            clock_div/cnt_1 (FF)
+  Destination:       clock_div/cnt_24 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clock_div/cnt_1 to clock_div/cnt_24
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.590  clock_div/cnt_1 (clock_div/cnt_1)
+     LUT1:I0->O            1   0.648   0.000  clock_div/Mcount_cnt_cy<1>_rt (clock_div/Mcount_cnt_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  clock_div/Mcount_cnt_cy<1> (clock_div/Mcount_cnt_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<2> (clock_div/Mcount_cnt_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<3> (clock_div/Mcount_cnt_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<4> (clock_div/Mcount_cnt_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<5> (clock_div/Mcount_cnt_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<6> (clock_div/Mcount_cnt_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<7> (clock_div/Mcount_cnt_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<8> (clock_div/Mcount_cnt_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<9> (clock_div/Mcount_cnt_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<10> (clock_div/Mcount_cnt_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<11> (clock_div/Mcount_cnt_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<12> (clock_div/Mcount_cnt_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<13> (clock_div/Mcount_cnt_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<14> (clock_div/Mcount_cnt_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<15> (clock_div/Mcount_cnt_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<16> (clock_div/Mcount_cnt_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<17> (clock_div/Mcount_cnt_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<18> (clock_div/Mcount_cnt_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<19> (clock_div/Mcount_cnt_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<20> (clock_div/Mcount_cnt_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<21> (clock_div/Mcount_cnt_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  clock_div/Mcount_cnt_cy<22> (clock_div/Mcount_cnt_cy<22>)
+     MUXCY:CI->O           0   0.065   0.000  clock_div/Mcount_cnt_cy<23> (clock_div/Mcount_cnt_cy<23>)
+     XORCY:CI->O           1   0.844   0.500  clock_div/Mcount_cnt_xor<24> (Result<24>)
+     LUT2:I1->O            1   0.643   0.000  clock_div/Mcount_cnt_eqn_241 (clock_div/Mcount_cnt_eqn_24)
+     FDC:D                     0.252          clock_div/cnt_24
+    ----------------------------------------
+    Total                      6.130ns (5.040ns logic, 1.090ns route)
+                                       (82.2% logic, 17.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.247ns (Levels of Logic = 2)
+  Source:            button (PAD)
+  Destination:       cnt_bcd/dek[2].bcd1/out_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: button to cnt_bcd/dek[2].bcd1/out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.849   0.851  button_IBUF (button_IBUF)
+     LUT3:I0->O            4   0.648   0.587  cnt_bcd/enn_3_and000011 (cnt_bcd/enn<2>)
+     FDCE:CE                   0.312          cnt_bcd/dek[2].bcd1/out_0
+    ----------------------------------------
+    Total                      3.247ns (1.809ns logic, 1.438ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 204 / 11
+-------------------------------------------------------------------------
+Offset:              9.097ns (Levels of Logic = 4)
+  Source:            m4clk/out_0 (FF)
+  Destination:       output_7<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: m4clk/out_0 to output_7<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            14   0.591   1.143  m4clk/out_0 (m4clk/out_0)
+     LUT3:I0->O            1   0.648   0.000  mux/Mmux_out_4_3 (mux/Mmux_out_4_3)
+     MUXF5:I1->O           7   0.276   0.851  mux/Mmux_out_4_2_f5 (out_4<0>)
+     LUT4:I0->O            1   0.648   0.420  transc/noutput_7<5>1 (output_7_5_OBUF)
+     OBUF:I->O                 4.520          output_7_5_OBUF (output_7<5>)
+    ----------------------------------------
+    Total                      9.097ns (6.683ns logic, 2.414ns route)
+                                       (73.5% logic, 26.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.66 secs
+ 
+--> 
+
+
+Total memory usage is 513308 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

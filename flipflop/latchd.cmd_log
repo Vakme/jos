@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/flipflop/latchd.xst" -ofn "/home/lab_jos/bielabra/flipflop/latchd.syr" 

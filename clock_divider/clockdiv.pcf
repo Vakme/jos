@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Oct 10 16:38:46 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+CONFIG ENABLE_SUSPEND = NO;
+CONFIG POST_CRC = DISABLE;
+COMP "clk" LOCATE = SITE "E12" LEVEL 1;
+COMP "slow_clk" LOCATE = SITE "V14" LEVEL 1;
+COMP "rst" LOCATE = SITE "T14" LEVEL 1;
+NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+SCHEMATIC END;
+

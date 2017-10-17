@@ -1,0 +1,6 @@
+verilog isim_temp "shreg.v"
+verilog isim_temp "fsm.v"
+verilog isim_temp "../clock_divider/clockdiv.v"
+verilog isim_temp "blinkled.v"
+verilog isim_temp "tt_bl.v"
+verilog isim_temp "/opt/xilinx/ISE//verilog/src/glbl.v"

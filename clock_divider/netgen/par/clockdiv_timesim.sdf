@@ -1,0 +1,298 @@
+(DELAYFILE
+  (SDFVERSION "3.0")
+  (DESIGN "clockdiv")
+  (DATE "Tue Oct 10 16:09:02 2017")
+  (VENDOR "Xilinx")
+  (PROGRAM "Xilinx SDF Writer")
+  (VERSION "P.20131013")
+  (DIVIDER /)
+  (VOLTAGE 1.14)
+  (TEMPERATURE 85)
+  (TIMESCALE 1 ps)
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE clk_BUFGP\/IBUFG)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 0 )( 0 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_OBUF")
+    (INSTANCE slow_clk_OBUF)
+      (DELAY
+        (ABSOLUTE
+          (PORT I ( 80 ))
+          (IOPATH I O ( 3055 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE rst_IBUF)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 0 )( 0 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUFGMUX")
+    (INSTANCE clk_BUFGP\/BUFG)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH I0 O ( 221 ))
+          (IOPATH I1 O ( 221 ))
+        )
+      )
+      (TIMINGCHECK
+        (SETUPHOLD (posedge S) (negedge I0) (624)(0))
+      )
+  )
+  (CELL (CELLTYPE "X_INV")
+    (INSTANCE clk_BUFGP\/BUFG\/SINV)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 0 )( 0 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE clk_BUFGP\/BUFG\/I0_USED)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 942 )( 942 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE cnt\<2\>\/DYMUX)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 155 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE cnt\<2\>\/CLKINV)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 990 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_LUT4")
+    (INSTANCE Mcount_cnt_xor\<2\>11)
+      (DELAY
+        (ABSOLUTE
+          (PORT ADR0 ( 595 ))
+          (PORT ADR1 ( 561 ))
+          (PORT ADR3 ( 539 ))
+          (IOPATH ADR0 O ( 552 )( 552 ))
+          (IOPATH ADR1 O ( 552 )( 552 ))
+          (IOPATH ADR2 O ( 552 )( 552 ))
+          (IOPATH ADR3 O ( 552 )( 552 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_INV")
+    (INSTANCE cnt\<0\>\/DXMUX)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 1245 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE cnt\<0\>\/DYMUX)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 102 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE cnt\<0\>\/SRINV)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 2790 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE cnt\<0\>\/CLKINV)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 990 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_LUT4")
+    (INSTANCE Mcount_cnt_xor\<1\>11)
+      (DELAY
+        (ABSOLUTE
+          (PORT ADR0 ( 619 ))
+          (PORT ADR2 ( 515 ))
+          (PORT ADR3 ( 476 ))
+          (IOPATH ADR0 O ( 546 )( 546 ))
+          (IOPATH ADR1 O ( 546 )( 546 ))
+          (IOPATH ADR2 O ( 546 )( 546 ))
+          (IOPATH ADR3 O ( 546 )( 546 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_INV")
+    (INSTANCE slow_clk_OBUF\/DYMUX)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 768 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE slow_clk_OBUF\/CLKINV)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 989 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE slow_clk_OBUF\/CEINV)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 451 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_FF")
+    (INSTANCE cnt_2)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH CLK O ( 675 )( 675 ))
+          (IOPATH SET O ( 0 )( 0 ))
+          (IOPATH RST O ( 1922 )( 1922 ))
+        )
+      )
+      (TIMINGCHECK
+        (SETUPHOLD (posedge I) (posedge CLK) (110)(48))
+        (SETUPHOLD (negedge I) (posedge CLK) (110)(48))
+        (PERIOD (posedge CLK) (1602))
+        (RECOVERY (negedge RST) (posedge CLK) (991))
+        (WIDTH (posedge RST) (1602))
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE cnt\<2\>\/FFY\/RSTAND)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 2353 )( 2353 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_LUT4")
+    (INSTANCE comp1)
+      (DELAY
+        (ABSOLUTE
+          (PORT ADR1 ( 514 ))
+          (PORT ADR2 ( 406 ))
+          (PORT ADR3 ( 493 ))
+          (IOPATH ADR0 O ( 552 )( 552 ))
+          (IOPATH ADR1 O ( 552 )( 552 ))
+          (IOPATH ADR2 O ( 552 )( 552 ))
+          (IOPATH ADR3 O ( 552 )( 552 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_FF")
+    (INSTANCE cnt_1)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH CLK O ( 579 )( 579 ))
+          (IOPATH SET O ( 0 )( 0 ))
+          (IOPATH RST O ( 1701 )( 1701 ))
+        )
+      )
+      (TIMINGCHECK
+        (SETUPHOLD (posedge I) (posedge CLK) (79)(48))
+        (SETUPHOLD (negedge I) (posedge CLK) (79)(48))
+        (PERIOD (posedge CLK) (1482))
+        (RECOVERY (negedge RST) (posedge CLK) (991))
+        (WIDTH (posedge RST) (1482))
+      )
+  )
+  (CELL (CELLTYPE "X_FF")
+    (INSTANCE cnt_0)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH CLK O ( 590 )( 590 ))
+          (IOPATH SET O ( 0 )( 0 ))
+          (IOPATH RST O ( 1701 )( 1701 ))
+        )
+      )
+      (TIMINGCHECK
+        (SETUPHOLD (posedge I) (posedge CLK) (79)(48))
+        (SETUPHOLD (negedge I) (posedge CLK) (79)(48))
+        (PERIOD (posedge CLK) (1482))
+        (RECOVERY (negedge RST) (posedge CLK) (991))
+        (WIDTH (posedge RST) (1482))
+      )
+  )
+  (CELL (CELLTYPE "X_FF")
+    (INSTANCE slow_clk_84)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH CLK O ( 675 )( 675 ))
+          (IOPATH SET O ( 0 )( 0 ))
+          (IOPATH RST O ( 1922 )( 1922 ))
+        )
+      )
+      (TIMINGCHECK
+        (SETUPHOLD (posedge I) (posedge CLK) (110)(48))
+        (SETUPHOLD (negedge I) (posedge CLK) (110)(48))
+        (SETUPHOLD (posedge CE) (posedge CLK) (311)(0))
+        (SETUPHOLD (negedge CE) (posedge CLK) (311)(0))
+        (PERIOD (posedge CLK) (1602))
+        (RECOVERY (negedge RST) (posedge CLK) (991))
+        (WIDTH (posedge RST) (1602))
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE slow_clk_OBUF\/FFY\/RSTAND)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 3051 )( 3051 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE slow_clk\/OUTPUT\/OFF\/OMUX)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 2812 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE rst\/IFF\/IMUX)
+      (DELAY
+        (PATHPULSE (741))
+        (ABSOLUTE
+          (IOPATH I O ( 909 ))
+        )
+      )
+  )
+)

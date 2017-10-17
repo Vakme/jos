@@ -1,0 +1,2 @@
+verilog work "netgen/par/clockdiv_timesim.v"
+verilog work "cd_TB.v"

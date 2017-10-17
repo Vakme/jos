@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/lab_jos/bielabra/diods/tt_bl_isim_beh.exe" -prj "/home/lab_jos/bielabra/diods/tt_bl_beh.prj" "work.tt_bl" "work.glbl" 

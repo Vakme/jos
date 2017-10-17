@@ -1,0 +1,5 @@
+set -tmpdir "/home/lab_jos/bielabra/transcoder/xst/projnav.tmp"
+set -xsthdpdir "/home/lab_jos/bielabra/transcoder/xst"
+elaborate
+-ifn clockdiv.prj
+-ifmt mixed

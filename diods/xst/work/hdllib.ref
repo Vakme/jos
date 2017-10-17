@@ -1,0 +1,4 @@
+MO clockdiv NULL ../clock_divider/clockdiv.v vlg67/clockdiv.bin 1507647512
+MO shreg NULL shreg.v vlg0D/shreg.bin 1507647512
+MO fsm NULL fsm.v vlg22/fsm.bin 1507647512
+MO blinkled NULL blinkled.v vlg79/blinkled.bin 1507647512

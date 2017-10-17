@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/clock_divider/clockdiv.xst" -ofn "/home/lab_jos/bielabra/clock_divider/clockdiv.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/clock_divider/clockdiv.xst" -ofn "/home/lab_jos/bielabra/clock_divider/clockdiv.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/clock_divider/clockdiv.xst" -ofn "/home/lab_jos/bielabra/clock_divider/clockdiv.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/clock_divider/clockdiv.xst" -ofn "/home/lab_jos/bielabra/clock_divider/clockdiv.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/clock_divider/clockdiv.xst" -ofn "/home/lab_jos/bielabra/clock_divider/clockdiv.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/clock_divider/clockdiv.xst" -ofn "/home/lab_jos/bielabra/clock_divider/clockdiv.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 clockdiv.ngc clockdiv.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o clockdiv_map.ncd clockdiv.ngd clockdiv.pcf 
+par -w -intstyle ise -ol high -t 1 clockdiv_map.ncd clockdiv.ncd clockdiv.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml clockdiv.twx clockdiv.ncd -o clockdiv.twr clockdiv.pcf 
+netgen -intstyle ise -s 4  -pcf clockdiv.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim clockdiv.ncd clockdiv_timesim.v 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/clock_divider/clockdiv.xst" -ofn "/home/lab_jos/bielabra/clock_divider/clockdiv.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc div.ucf -p xc3s700an-fgg484-4 clockdiv.ngc clockdiv.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o clockdiv_map.ncd clockdiv.ngd clockdiv.pcf 
+par -w -intstyle ise -ol high -t 1 clockdiv_map.ncd clockdiv.ncd clockdiv.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml clockdiv.twx clockdiv.ncd -o clockdiv.twr clockdiv.pcf -ucf div.ucf 
+bitgen -intstyle ise -f clockdiv.ut clockdiv.ncd 

@@ -1,0 +1,28 @@
+Running: /opt/xilinx/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/lab_jos/bielabra/diods/tt_bl_isim_beh.exe -prj /home/lab_jos/bielabra/diods/tt_bl_beh.prj work.tt_bl work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/lab_jos/bielabra/diods/shreg.v" into library work
+Analyzing Verilog file "/home/lab_jos/bielabra/diods/fsm.v" into library work
+Analyzing Verilog file "/home/lab_jos/bielabra/diods/../clock_divider/clockdiv.v" into library work
+Analyzing Verilog file "/home/lab_jos/bielabra/diods/blinkled.v" into library work
+Analyzing Verilog file "/home/lab_jos/bielabra/diods/tt_bl.v" into library work
+Analyzing Verilog file "/opt/xilinx/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 94488 KB
+Fuse CPU Usage: 1110 ms
+Compiling module clockdiv_default
+Compiling module fsm
+Compiling module shreg
+Compiling module blinkled
+Compiling module tt_bl
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 6 Verilog Units
+Built simulation executable /home/lab_jos/bielabra/diods/tt_bl_isim_beh.exe
+Fuse Memory Usage: 392552 KB
+Fuse CPU Usage: 1120 ms
+GCC CPU Usage: 470 ms

@@ -1,0 +1,10 @@
+ISim log file
+Running: /home/lab_jos/bielabra/transcoder/clockdiv_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/lab_jos/bielabra/transcoder/clockdiv_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+Time resolution is 1 fs
+# onerror resume
+# wave add /
+No active Database
+# run 1000 ns
+Unable to execute live simulation command.
+# exit 0

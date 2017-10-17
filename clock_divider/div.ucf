@@ -1,0 +1,11 @@
+ #clkdib; 5.10.2017 AS
+CONFIG VCCAUX = "3.3" ;
+CONFIG ENABLE_SUSPEND = "NO" ;
+CONFIG POST_CRC = "DISABLE" ;
+
+NET "clk"       LOC = "E12"  | IOSTANDARD = LVCMOS33 | PERIOD = 20.000 ;
+
+#NET ""       LOC = "A7"   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "slow_clk"     LOC = "V14"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;#generator
+NET "rst"     LOC = "T14"  | IOSTANDARD = LVCMOS33 | PULLDOWN ;#przycisk polnocny - reset
+

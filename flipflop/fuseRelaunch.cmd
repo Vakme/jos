@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/lab_jos/bielabra/flipflop/TB_FF_isim_beh.exe" -prj "/home/lab_jos/bielabra/flipflop/TB_FF_beh.prj" "work.TB_FF" "work.glbl" 

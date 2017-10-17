@@ -1,0 +1,8 @@
+MO mod4clk NULL mod4clk.v vlg0A/mod4clk.bin 1508252023
+MO clockdiv NULL ../clock_divider/clockdiv.v vlg67/clockdiv.bin 1508252023
+MO cnt1dek NULL cnt1dek.v vlg0A/cnt1dek.bin 1508252023
+MO segment_7 NULL segment_7.v vlg35/segment__7.bin 1508252023
+MO MUX NULL MUX.v vlg06/_m_u_x.bin 1508252023
+MO transcoder NULL transcoder.v vlg45/transcoder.bin 1508252023
+MO decoder NULL decoder.v vlg02/decoder.bin 1508252023
+MO cntBCD NULL cntBCD.v vlg36/cnt_b_c_d.bin 1508252023

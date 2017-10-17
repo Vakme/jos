@@ -1,0 +1,4 @@
+verilog isim_temp "FlipFlop.v"
+verilog isim_temp "ffd.v"
+verilog isim_temp "TB_FF.v"
+verilog isim_temp "/opt/xilinx/ISE//verilog/src/glbl.v"

@@ -1,0 +1,4 @@
+verilog work "FlipFlop.v"
+verilog work "ffd.v"
+verilog work "TB_FF.v"
+verilog work "/opt/xilinx/ISE//verilog/src/glbl.v"

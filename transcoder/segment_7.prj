@@ -1,0 +1,8 @@
+verilog work "cnt1dek.v"
+verilog work "transcoder.v"
+verilog work "MUX.v"
+verilog work "mod4clk.v"
+verilog work "decoder.v"
+verilog work "cntBCD.v"
+verilog work "../clock_divider/clockdiv.v"
+verilog work "segment_7.v"

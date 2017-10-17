@@ -1,0 +1,4 @@
+verilog work "shreg.v"
+verilog work "fsm.v"
+verilog work "../clock_divider/clockdiv.v"
+verilog work "blinkled.v"

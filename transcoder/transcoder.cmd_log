@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/transcoder.xst" -ofn "/home/lab_jos/bielabra/transcoder/transcoder.syr" 

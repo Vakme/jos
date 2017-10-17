@@ -1,0 +1,25 @@
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/segment_7.xst" -ofn "/home/lab_jos/bielabra/transcoder/segment_7.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/segment_7.xst" -ofn "/home/lab_jos/bielabra/transcoder/segment_7.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/segment_7.xst" -ofn "/home/lab_jos/bielabra/transcoder/segment_7.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/segment_7.xst" -ofn "/home/lab_jos/bielabra/transcoder/segment_7.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/segment_7.xst" -ofn "/home/lab_jos/bielabra/transcoder/segment_7.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/segment_7.xst" -ofn "/home/lab_jos/bielabra/transcoder/segment_7.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/segment_7.xst" -ofn "/home/lab_jos/bielabra/transcoder/segment_7.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/segment_7.xst" -ofn "/home/lab_jos/bielabra/transcoder/segment_7.syr" 
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/segment_7.xst" -ofn "/home/lab_jos/bielabra/transcoder/segment_7.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 segment_7.ngc segment_7.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o segment_7_map.ncd segment_7.ngd segment_7.pcf 
+par -w -intstyle ise -ol high -t 1 segment_7_map.ncd segment_7.ncd segment_7.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml segment_7.twx segment_7.ncd -o segment_7.twr segment_7.pcf 
+bitgen -intstyle ise -f segment_7.ut segment_7.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/lab_jos/7seg.ucf -p xc3s700an-fgg484-4 segment_7.ngc segment_7.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/lab_jos/7seg.ucf -p xc3s700an-fgg484-4 segment_7.ngc segment_7.ngd  
+xst -intstyle ise -ifn "/home/lab_jos/bielabra/transcoder/segment_7.xst" -ofn "/home/lab_jos/bielabra/transcoder/segment_7.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/lab_jos/7seg.ucf -p xc3s700an-fgg484-4 segment_7.ngc segment_7.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/lab_jos/7seg.ucf -p xc3s700an-fgg484-4 segment_7.ngc segment_7.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o segment_7_map.ncd segment_7.ngd segment_7.pcf 
+par -w -intstyle ise -ol high -t 1 segment_7_map.ncd segment_7.ncd segment_7.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/lab_jos/7seg.ucf -p xc3s700an-fgg484-4 segment_7.ngc segment_7.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o segment_7_map.ncd segment_7.ngd segment_7.pcf 
+par -w -intstyle ise -ol high -t 1 segment_7_map.ncd segment_7.ncd segment_7.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml segment_7.twx segment_7.ncd -o segment_7.twr segment_7.pcf 

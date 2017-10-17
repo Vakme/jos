@@ -1,0 +1,22 @@
+Running: /opt/xilinx/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/lab_jos/bielabra/clock_divider/cd_TB_isim_beh.exe" -prj "/home/lab_jos/bielabra/clock_divider/cd_TB_beh.prj" "work.cd_TB" "work.glbl" 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/lab_jos/bielabra/clock_divider/clockdiv.v" into library work
+Analyzing Verilog file "/home/lab_jos/bielabra/clock_divider/cd_TB.v" into library work
+Analyzing Verilog file "/opt/xilinx/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 94504 KB
+Fuse CPU Usage: 1110 ms
+Compiling module clockdiv(div=25000000)
+Compiling module cd_TB
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable /home/lab_jos/bielabra/clock_divider/cd_TB_isim_beh.exe
+Fuse Memory Usage: 326996 KB
+Fuse CPU Usage: 1120 ms
+GCC CPU Usage: 240 ms

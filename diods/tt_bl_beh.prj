@@ -1,0 +1,6 @@
+verilog work "shreg.v"
+verilog work "fsm.v"
+verilog work "../clock_divider/clockdiv.v"
+verilog work "blinkled.v"
+verilog work "tt_bl.v"
+verilog work "/opt/xilinx/ISE//verilog/src/glbl.v"
